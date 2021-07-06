@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { NavbarComponent } from "../../components/NavbarComponent"
-export const HomeContainer = ()  => {
+export const ItemListContainer = ()  => {
     // fetch a la base de datos o ajax
     const carrito = [];
 

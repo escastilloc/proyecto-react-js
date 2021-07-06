@@ -1,15 +1,13 @@
 import './App.css';
 import "../node_modules/bootstrap/dist/css/bootstrap.css"
-import ItemListContainer from './ItemListContainer';
-import { HomeContainer} from './containers/HomeContainer';
-import { ItemCount } from './components/ItemCount';
+import { ItemListContainer} from './containers/ItemListContainer';
+import { ItemList } from './components/ItemList';
 
 function App() {
   return (
     <div>
-      <HomeContainer/>
-      <ItemListContainer greeting={'Bienvenido gente'}/>
-      <ItemCount/>
+      <ItemListContainer/>
+      <ItemList/>
     </div>
   );
 }
