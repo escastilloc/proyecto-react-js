@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { useEffect } from "react";
 export const ItemListContainer = ()  => {
     // fetch a la base de datos o ajax
-    const carrito = [];
+    const cart = [];
     // const [listProduct, setListProducts ] = useState();
     // const { nombreProducto } = useParams();
 
@@ -20,7 +20,7 @@ export const ItemListContainer = ()  => {
     return (
         <div>
             <header>
-                <NavbarComponent cart={carrito}/>
+                <NavbarComponent cart={cart}/>
             </header>
             <section>
                 <Link to={'/detalle/:nombreProducto'}>Ver producto</Link>

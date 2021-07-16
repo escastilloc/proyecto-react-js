@@ -2,7 +2,7 @@ import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
 import { useState } from "react";
 
-export const Item = ({name, price, img}) => {
+export const Item = ({name, price, stock, addToCart, listProducts, img}) => {
     const [contador, setContador] = useState(0);
     return (
         <Card style={{ width: '18rem' }}>
@@ -12,7 +12,9 @@ export const Item = ({name, price, img}) => {
     <Card.Text>
      {price}
     </Card.Text>
-    <Button variant="primary">Añadir al carrito</Button>
+    <Button onClick={() => {
+      addToCart({ listProducts })
+    }} variant="primary">Añadir al carrito</Button>
     <Button onClick={() => {setContador(contador-1)}}>-</Button>
     {contador}
     <Button onClick={() => {setContador(contador+1)}}>+</Button>

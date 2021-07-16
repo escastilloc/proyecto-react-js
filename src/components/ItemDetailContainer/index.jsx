@@ -7,8 +7,12 @@ import { useParams } from 'react-router-dom';
 export const ItemDetailContainer = ()  => {
     
     const [listProducts, setListProducts] = useState([]);
+    const [cart, setCart] = useState([]);
+    const [isAdded, setIsAdded] = useState(false)
     const { nombreProducto } = useParams();
-    const carrito = [];
+    // const carrito = [];
+    
+
 
     useEffect( () => {
         async function getDataFromMELI() {
@@ -18,18 +22,25 @@ export const ItemDetailContainer = ()  => {
         }
         getDataFromMELI();
     }, [nombreProducto])
+
+    function addToCart(product){
+        setCart([...cart, product ])
+        setIsAdded(true);
+    }
     
     return (
         <>
              <header>
-                <NavbarComponent cart={carrito}/>
+                <NavbarComponent cart={cart}/>
             </header>
             <section>
                 {
                     listProducts.map(element => {
                         return (
                             <div>
-                                <Item key={element.id} name={element.title} price={element.price} img={element.thumbnail}/>
+                                {isAdded ? <button>Terminar compra</button> :
+                                <Item key={element.id} name={element.title} price={element.price} stock={element.stock} addToCart={addToCart} listProducts={listProducts} img={element.thumbnail}/>
+                                }
                             </div>
                         )
                     })
