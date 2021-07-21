@@ -1,29 +1,22 @@
-import { useState } from "react";
-import { NavbarComponent } from "../../components/NavbarComponent"
+import { useContext, useState } from "react";
 import { Link } from 'react-router-dom';
-import { useEffect } from "react";
+import { ShopContext } from "../../context/ShopContext";
+import { ItemList } from "../../components/ItemList";
+
 export const ItemListContainer = ()  => {
     // fetch a la base de datos o ajax
-    const cart = [];
-    // const [listProduct, setListProducts ] = useState();
-    // const { nombreProducto } = useParams();
 
-    // useEffect( () => {
-    //     async function getDataFromMELI() {
-    //         const response = await fetch(`https://api.mercadolibre.com/sites/MLA/search?q=${nombreProducto}`);
-    //         const data = await response.json();
-    //         setListProducts(data.results);
-    //     }
-    //     getDataFromMELI();
-    // }, [nombreProducto])
+    
+    const CONTEXT = useContext(ShopContext);
+    console.log(CONTEXT)
 
     return (
         <div>
-            <header>
-                <NavbarComponent cart={cart}/>
-            </header>
             <section>
-                <Link to={'/detalle/:nombreProducto'}>Ver producto</Link>
+                <Link to="/detalle">Ver producto</Link>
+                <br/>
+                <br/>
+                <ItemList/>
             </section>
            
         </div>
