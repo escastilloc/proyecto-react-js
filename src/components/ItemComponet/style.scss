@@ -1,0 +1,39 @@
+@media (max-width: 644px){
+    #cards{
+        width: 450px;
+        height: 500px;  
+    }
+}
+
+@media (min-width: 644px){
+    #cards{
+        width: 270px;
+        height: 500px;  
+    }
+}
+
+
+    #textHeader{
+        height: 3rem;
+    }
+
+    #containerBody{
+
+        display:flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+
+        #imagen{
+            width: auto;
+
+            max-width: 200px;
+            
+            height: 190px;
+        }
+
+        #buttonPosition{
+            justify-self: end;
+        }
+    }
+
+

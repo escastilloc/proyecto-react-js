@@ -1,0 +1,52 @@
+#itemCountContainer{
+    display: flex;
+    flex-flow: column nowrap;
+    width: 10em;
+    padding: 0.2em;
+    align-items: center;
+
+    
+}
+
+#itemCountStyle{
+    display:flex;
+    flex-flow: row nowrap;
+    height: 2em;
+    padding-right: 0.4em;
+
+    h4{
+        min-width: 1.5em;
+        text-align: center;
+        justify-content: center;
+    }
+}
+
+.noDisplay{
+    display:none;
+}
+
+.buttonsCountStyle{
+    width: 1.5em;
+    line-height: 1em;
+    border-radius: 1.6em;
+    font-size: 1.3em;
+    font-weight: bold;
+    text-align: center;
+    background: #43ace3;  
+    color: #fff;
+}
+
+.buttonAddToCart{
+    min-width: 120px;
+    font-family: 'Rubik', sans-serif;
+    max-height: 3.3em;
+
+    width: auto;
+    border-radius: 1.6em;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-align: center;
+    background: #43ace3;  
+    color: #fff;
+}
+
